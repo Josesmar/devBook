@@ -10,13 +10,16 @@ import (
 )
 
 var (
-	//StringConexaoBanco é a string de conexão com o MySql
+	// StringConexaoBanco é a string de conexão com o MySql
 	StringConexaoBanco = ""
 
-	//Porta onde a API vai estar rodando
+	// Porta onde a API vai estar rodando
 	Porta = 0
 
-	IP = 0
+	// Secretkey é a chave que vai ser usada assinar o token
+	SecretKey []byte
+
+	IP = ""
 )
 
 // Carrregar vai inicializar as variáveis de ambiente
@@ -41,4 +44,7 @@ func Carregar() {
 		os.Getenv("DB_SENHA"),
 		os.Getenv("DB_NOME"),
 	)
+
+	SecretKey = []byte(os.Getenv("SECRET_KEY"))
+	IP = os.Getenv("API_IP")
 }
