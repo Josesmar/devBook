@@ -68,5 +68,6 @@ func ExtrairUsuarioID(r *http.Request) (uint64, error) {
 		}
 		return usuarioID, nil
 	}
+
 	return 0, errors.New("Token inválido")
 }
