@@ -26,7 +26,7 @@ var (
 func Carregar() {
 	var erro error
 
-	if erro = godotenv.Load(); erro != nil { //gotoenv ler o arquivo
+	if erro = godotenv.Load(); erro != nil { //gotoenv ler o arquivo .env
 		log.Fatal(erro) //Se tiver algum problema terá que parar (matar a execução mesmo) a api
 	}
 

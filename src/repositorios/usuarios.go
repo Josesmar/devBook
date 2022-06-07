@@ -11,7 +11,7 @@ type Usuarios struct {
 	db *sql.DB
 }
 
-// NovoRepositorioDeUsuarios cria um repositorio de usuariosF
+// NovoRepositorioDeUsuarios cria um repositorio de usuarios
 func NovoRepositorioDeUsuarios(db *sql.DB) *Usuarios {
 	return &Usuarios{db}
 }

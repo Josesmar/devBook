@@ -12,11 +12,11 @@ import (
 func Logger(proximaFuncao http.HandlerFunc) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		log.Printf("\n%s %s %s", r.Method, r.RequestURI, r.Host)
-		proximaFuncao(w, r)
+		proximaFuncao(w, r) //Vai executar a função que vem por parâmetro
 	}
 }
 
-// Autenticar verificar se o usuário fazendo a requisição está autenticado
+// Autenticar verificar se o usuário que está fazendo a requisição está autenticado
 func Autenticar(proximaFuncao http.HandlerFunc) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) { // o método retorna uma função que executa outra função passada no parametro
 		if erro := autenticacao.ValidarToken(r); erro != nil {
