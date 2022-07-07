@@ -10,3 +10,9 @@ values
 (1,2),
 (3,1),
 (1,3);
+
+insert into publicacoes (titulo, conteudo, autor_id)
+values
+("Publicação do usuário 1", "Essa é a publicação do ususuário 1! Obaa!!", 1),
+("Publicação do usuário 1", "Essa é a publicação do ususuário 1! Obaa!!", 1),
+("Publicação do usuário 1", "Essa é a publicação do ususuário 1! Obaa!!", 1);
